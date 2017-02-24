@@ -148,7 +148,7 @@ def draw_circle(radius, numPoints):
 
 #Wrapper function showing standard usage of draw_circle
 def drawCircle():
-    draw_circle(400, 5000)
+    draw_circle(400, 300)
 
 #Improved method to draw Captain America's shield using pyautogui.
 #Switches colors in course of drawing each line, rather than painting and painting over
@@ -201,7 +201,7 @@ def draw_shield(radius, numPoints):
 def drawShield():
     moveToCenter()
     pyautogui.click(x=689, y=67)
-    draw_shield(80, 6000)
+    draw_shield(80, 100)
 
 #Simple test to do some recursive drawing       
 def draw_node(step, centerX, centerY):
@@ -326,7 +326,7 @@ def draw_modified(step, centerX, centerY, radius, numSpokes):
             newStep = step - 1
             newRadius = radius / 2
             newCenterX, newCenterY = pyautogui.position()
-            draw_Modified(newStep, newCenterX, newCenterY, newRadius, numSpokes)
+            drawModified(newStep, newCenterX, newCenterY, newRadius, numSpokes)
         pyautogui.click(x=colorX[colXIdx],y=colorY[colYIdx])
         pyautogui.moveTo(centerX, centerY)
 
@@ -334,14 +334,14 @@ def draw_modified(step, centerX, centerY, radius, numSpokes):
 def drawWeb():
     #pickRandomBrush()
     centerX, centerY = moveToCenter()
-    draw_Modified(5, centerX, centerY, 2400, 4)
+    drawModified(5, centerX, centerY, 2400, 4)
 
 #Call draw_Modified with random parameters
 def drawRandWeb():
     centerX, centerY = moveToCenter()
     r = random.randrange(800, 2400)
     spokes = random.randrange(4, 12)
-    draw_Modified(5, centerX, centerY, r, spokes)
+    drawModified(5, centerX, centerY, r, spokes)
         
 #Helper function to determine on-screen location of items. Usage: call loc_helper and nothing else, press Ctrl+F to print the x,y
 #coordinates of the mouse
@@ -422,7 +422,6 @@ hk.register(('control', 'f'), callback=loc_helper)
 
 #Playing around with looking up a function in a dict
 def totalRandomDrawing():
-    clear_Canvas()
     funcdict = {
         'draw_Concentric' : draw_Concentric,
         'drawRandWeb' : drawRandWeb,
@@ -431,4 +430,5 @@ def totalRandomDrawing():
     }
     random.choice(list(funcdict.values()))()
 
-
+if __name__=="__main__":
+	totalRandomDrawing()

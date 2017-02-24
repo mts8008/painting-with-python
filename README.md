@@ -1,5 +1,5 @@
 ![Alt text](RandomWebPaint.jpg?raw=true)
-Playing around with the SystemHotkey package and pyautogui in preparation for my full conversion of my PROJECT-Jarvis project to python. Ended up making some interesting recursive drawing functions while getting familiar with pyautogui and SystemHotkey.
+Playing around with the SystemHotkey package and pyautogui in preparation for my full conversion of my Project-JARVIS project to python. Ended up making some interesting recursive drawing functions while getting familiar with pyautogui and SystemHotkey.
 
 Usage:
 

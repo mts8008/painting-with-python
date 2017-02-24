@@ -1,6 +1,5 @@
-Playing around with the SystemHotkey package and pyautogui in preparation for
-my total conversion of my PROJECT-JARVIS repo to python. Made some interesting 
-drawing functions while getting familiar with pyautogui and SystemHotkey.
+![Alt text](RandomWebPaint.jpg?raw=true)
+Playing around with the SystemHotkey package and pyautogui in preparation for my total conversion of my PROJECT-JARVIS repo to python. Ended up making some interesting drawing functions while getting familiar with pyautogui and SystemHotkey.
 
 Usage:
 
